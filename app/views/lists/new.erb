@@ -1,0 +1,10 @@
+
+<form class="new-list-form" action="/lists" method="post">
+  <label for="">name</label>
+  <input type="text" name="list[name]" value="<%= @list.try(:name) %>">
+
+  <label for="">description</label>
+  <input type="text" name="list[description]" value="<%= @list.try(:description) %>">
+
+  <input type="submit" value="Create!!">
+</form>

@@ -1,0 +1,3 @@
+<% @lists.each do |list| %>
+  <%= erb :'lists/show', layout: false, locals: { list: list } %>
+<% end %>

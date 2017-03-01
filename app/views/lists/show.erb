@@ -1,0 +1,13 @@
+<h2><%= list.name %></h2>
+<p><%= list.description %></p>
+
+<ul>
+  <% list.tasks.each do |task| %>
+    <li><%= task.text %></li>
+  <% end %>
+</ul>
+
+<form action="/lists/<%= list.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="KILL IT">
+</form>

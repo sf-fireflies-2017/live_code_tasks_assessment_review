@@ -18,6 +18,18 @@
   <title></title>
 </head>
 <body>
-  <%= yield %>
+  <main>
+    <div>
+      <% if @errors && @errors.any? %>
+        <ul>
+          <% @errors.each do |error_message| %>
+            <p><%= error_message %></p>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+
+    <%= yield %>
+  </main>
 </body>
 </html>
